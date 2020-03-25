@@ -79,6 +79,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.4.1.slim.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="CrudPage.aspx" />
     <Content Include="database\css\jquery.dataTables.min.css" />
     <Content Include="database\js\jquery.dataTables.min.js" />
     <Content Include="fontawsome\css\all.css" />
@@ -1680,6 +1681,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrudPage.aspx.cs">
+      <DependentUpon>CrudPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrudPage.aspx.designer.cs">
+      <DependentUpon>CrudPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
