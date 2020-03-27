@@ -53,13 +53,14 @@
                               </div>
                               <div class="row">
                                   <div class="col-md-4">
-                                       <button type="submit" class="btn btn-primary btn-lg btn-block">Add</button>
+                                      <asp:Button ID="Button1" runat="server" class="btn btn-primary btn-lg btn-block" Text="Add" OnClick="Button1_Click" />
                                   </div>
                                   <div class="col-md-4">
-                                       <button type="submit" class="btn btn-success btn-lg btn-block">Update</button>
+                                      <asp:Button ID="Button2" runat="server" class="btn btn-success btn-lg btn-block" Text="Update" OnClick="Button2_Click" />
                                   </div>
                                   <div class="col-md-4">
-                                       <button type="submit" class="btn btn-danger btn-lg btn-block">Delete</button>
+                                      <asp:Button ID="Button3" runat="server" class="btn btn-danger btn-lg btn-block" Text="Delete" OnClick="Button3_Click" />
+
                                   </div>
                               </div>
                              

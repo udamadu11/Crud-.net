@@ -13,5 +13,21 @@ namespace Crud.net
         {
 
         }
+
+        //add button
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //update button
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+        // delete button
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
