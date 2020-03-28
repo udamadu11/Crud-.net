@@ -1,8 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="CrudPage.aspx.cs" Inherits="Crud.net.CrudPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('table').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
+        })
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="container-fluid" style="margin-top:50px">
+    <div class="container-fluid" style="margin-top:50px">
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
@@ -71,7 +76,19 @@
                 </div>
             </div>
             <div class="col-7">
-                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testConnectionString %>" SelectCommand="SELECT * FROM [users1]"></asp:SqlDataSource>
+                <div>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table table-striped table-bordered">
+                    <Columns>
+                        <asp:BoundField DataField="full_name" HeaderText="Full Name" SortExpression="full_name" />
+                        <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address" />
+                        <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
+                        <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
+                        <asp:BoundField DataField="zip" HeaderText="Zip" SortExpression="zip" />
+                    </Columns>
+                </asp:GridView>
+                </div>
+                
             </div>
         </div>
    </div>
